@@ -13,11 +13,11 @@ jobs:
     steps:
       - name: 'Install KICS and dependencies'
         run: |
-          if [[ ! -x "$(command -v go)" ]]; then
-                sudo apt-get install -y golang
-              fi
-              curl -L https://github.com/Checkmarx/kics/releases/latest/download/kics -o kics
-              chmod +x kics
-              sudo mv kics /usr/local/bin/
-            working-directory: ${{ env.WORKING_DIR }}
+          # if [[ ! -x "$(command -v go)" ]]; then
+          #       sudo apt-get install -y golang
+          #     fi
+            curl -L https://github.com/Checkmarx/kics/releases/latest/download/kics -o kics
+            chmod +x kics
+            sudo mv kics /usr/local/bin/
+          working-directory: ${{ env.WORKING_DIR }}
             
