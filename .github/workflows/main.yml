@@ -1,6 +1,8 @@
 name: deployment to GCP platform
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
   
 jobs:
   dev_deployment:
