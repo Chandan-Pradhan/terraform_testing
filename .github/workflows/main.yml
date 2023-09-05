@@ -15,7 +15,6 @@ jobs:
         run: |
           curl -L https://github.com/Checkmarx/kics/releases/latest/download/kics -o kics
           chmod +x kics
-          mkdir test
-          ls -al
+          basename kics
         working-directory: ${{ env.WORKING_DIR }}
             
