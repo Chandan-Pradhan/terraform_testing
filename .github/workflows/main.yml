@@ -13,10 +13,8 @@ jobs:
     steps:
       - name: 'Install KICS and dependencies'
         run: |
-          mkdir kics
           curl -L https://github.com/Checkmarx/kics/releases/latest/download/kics -o kics
           chmod +x kics
-          cd kics
-          ls -al
+          ls
         working-directory: ${{ env.WORKING_DIR }}
             
