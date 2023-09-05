@@ -17,6 +17,7 @@ jobs:
         run: |
           git clone https://github.com/Checkmarx/kics.git
           cd kics
-          ./bin/kics scan -p main.tf --report-formats json -o ./results
+          ls -al
+          docker run -v main.tf:/path checkmarx/kics:latest scan -p /path
         working-directory: ${{ env.WORKING_DIR }}
             
